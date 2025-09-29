@@ -37,13 +37,13 @@ const userReducer=(state= {name:""},action)=>{
 
 }
 
-function login (name){
+function color2 (name){
     return{
         type:"theme1",
         payload:name
     }
 }
-function logout(name){
+function color1(name){
     return{
         type:"theme",
         payload:name
@@ -83,4 +83,7 @@ document.getElementById('btn4').onclick=()=>{
 store.subscribe(()=>{
 document.getElementById('content').innerText=store.getState().counter.value
 document.getElementById('cont').innerText=store.getState().user.name
+document.getElementById('bodyy').style.backgroundColor=store.getState().user.name
+document.getElementById('bodyy').style.color=store.getState().user.name==="red"?"white":"skyblue";
+
 })
